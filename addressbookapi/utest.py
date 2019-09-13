@@ -59,5 +59,4 @@ if __name__ == '__main__':
 	es = Elasticsearch()
 	es.indices.delete(index='address-book', ignore=[400, 404])
 	es.indices.create(index='address-book', ignore=[400, 404])
-	with addressbook.app.app_context():
-	    unittest.main()
+	unittest.main()
